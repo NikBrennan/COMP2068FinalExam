@@ -25,7 +25,7 @@ const ArtistSchema = new mongoose.Schema({
 // !!! BONUS (25 points): Add an instance method to retrieve all songs for an artist
 // NOTE! Requires the controller part as well to get the marks!
 ArtistSchema.methods.getAllSongs = async function () {
-  return await mongoose.model('Artist').find({
+  return await mongoose.model('Song').find({
     artist: this._id
   });
 }
