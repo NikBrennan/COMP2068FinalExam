@@ -71,6 +71,7 @@ exports.update = async (request, response, next) => {
   try {
     // a) (15 points): Using destructuring, extract the attributes from the request body
     const {
+      id,
       firstName,
       lastName,
       band
@@ -78,6 +79,7 @@ exports.update = async (request, response, next) => {
 
     // b) (25 points): Update an existing artist using the extracted attributes
     await Artist.findOneAndUpdate({_id: id}, {
+      id,
       firstName,
       lastName,
       band

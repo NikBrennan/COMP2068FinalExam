@@ -87,7 +87,7 @@ exports.update = async (request, response, next) => {
       artist
     });
 
-    const song = Song.findById(id);
+    const song = await Song.findById(id);
 
     response.status(200).json({
       message: "Song was updated successfully",

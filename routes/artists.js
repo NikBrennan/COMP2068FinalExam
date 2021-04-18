@@ -11,6 +11,6 @@ module.exports = router => {
   router.get('/artists/:id', show);
   router.post('/artists', create);
   router.put('/artists', update);
-  router.get('/artists', destroy);
+  router.delete('/artists', destroy);
   return router;
 };
